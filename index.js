@@ -21,7 +21,7 @@ var hipchat = new HipChatClient(process.env.HIPCHAT_TOKEN);
 function sendMessage(message) {
   hipchat.postMessage({
     room: process.env.HIPCHAT_ROOM,
-    from: process.env.HIPCHAT_FROM || 'Jira',
+    from: process.env.HIPCHAT_FROM || 'JIRA',
     message: message,
     color: process.env.HIPCHAT_COLOR || 'purple'
   }, function (result) {
